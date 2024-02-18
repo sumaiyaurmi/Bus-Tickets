@@ -4,3 +4,18 @@
 .font-inter{
     font-family: "Inter", sans-serif;
 }
+.banner{
+background-image: url(./images/banner.png);
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+border-radius: 32px ;
+min-height: 500px;
+
+}
+.fifteenoff{
+
+}
+.twentyoff{ 
+
+}

@@ -14,7 +14,103 @@
 <!-- css -->
 <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    
+<body class="p-4">
+    <header>
+        <!-- nav start -->
+        <nav class="mb-8">
+            <div class="navbar bg-base-100">
+              <div class="navbar-start">
+                <div class="dropdown">
+                  <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="h-5 w-5"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h8m-8 6h16"
+                      />
+                    </svg>
+                  </div>
+                  <ul
+                    tabindex="0"
+                    class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 text-base rounded-box w-52"
+                  >
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <a class="btn btn-ghost text-2xl lg:text-4xl font-railway font-extrabold gap-0"
+                  >P-Ticket</a>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-base">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                </ul>
+              </div>
+              <div class="navbar-end ">
+                <div class="flex gap-2 bg-[#1DD1001A] rounded-xl p-4">
+                    <a class="bt text-base lg:text-xl text-[#1DD100] font-railway font-bold ">Bus</a>
+                <img src="./images/bus-icon.png" alt="">
+                </div>
+              </div>
+            </div>
+          </nav>
+          <!-- nav end -->
+          <!-- banner start -->
+        <div class="banner">
+            <div class="  text-center space-y-5 ">
+<h1 class=" text-4xl lg:text-6xl font-railway font-extrabold text-[#FFFFFF]  pt-32 ">End-to-End Travel with <br><span class="text-[#1DD100] ">P Paribahan</span></h1>
+<p class="font-inter text-[#FFFFFF]"> With a user-friendly interface, customers can quickly search for available routes, <br>compare prices, and select their preferred seating options</p>           
+<button class="btn bg-[#1DD100] p-5 font-railway font-bold border-0 ">Buy Tickets</button>
+</div>
+
+        </div>
+    </header>
+    <main>
+        <!-- offer section start -->
+<section class="best-offer mt-28">
+    <h1 class="text-4xl font-railway font-bold text-center">Best offers for you</h1>
+    <div class="flex gap-5 flex-col lg:flex-row justify-around mt-12">
+        <!-- 15% off -->
+        <div class="fifteenoff bg-[#FFBF0F] flex rounded-3xl"> 
+            <div class="p-12 font-inter font-extrabold">
+                <h3 class="text-4xl ">15% OFF</h3>
+                <p class="text-xl">on your next purchase
+                <br> <span class="text-[#03071280] text-base ">use by January 2024</span></p>
+            </div>
+            <img src="./images/cupon-devider.png" alt="">
+        <div class="py-14 px-12 font-railway space-y-2">
+            <h2 class="text-2xl font-bold">NEW15</h2> <p class="text-xl text-[#03071266] font-medium"> Coupon Code</p>
+        </div>
+        </div>
+            <!-- 20% off -->
+        <div class="fifteenoff bg-[#F78C9C] flex rounded-3xl"> 
+            <div class="p-12 font-inter font-extrabold">
+                <h3 class="text-4xl ">20% OFF</h3>
+                <p class="text-xl">on your next purchase
+                <br> <span class="text-[#03071280] text-base ">use by January 2024</span></p>
+            </div>
+            <img src="./images/cupon-devider.png" alt="">
+        <div class="py-14 px-12 font-railway space-y-2">
+            <h2 class="text-2xl font-bold">Couple 20</h2> <p class="text-xl text-[#03071266] font-medium"> Coupon Code</p>
+        </div>
+        </div>
+    </div>
+</section>
+<!-- offer section end -->
+
+    </main>
+    <footer></footer>
 </body>
 </html>
