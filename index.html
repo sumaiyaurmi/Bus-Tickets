@@ -180,7 +180,8 @@
               </div>
               <button class="btn bg-[#1DD10026] flex text-[#1DD100] font-inter">
                 <img src="./images/seat-green.png" alt="" />
-                <span>8</span>
+                <!-- Available sit -->
+                <span id="current-sit">40</span>
                 <span>Seats left</span>
               </button>
             </div>
@@ -220,57 +221,57 @@
               </btn>
             </div>
 
-            <div class="grid grid-cols-4 gap-5 left-part-sits">
+            <div id="Sits-container" class="grid grid-cols-4 gap-5 left-part-sits " >
               <!-- 1st row -->
-              <button class="btn">A1</button>
-                <button class="btn">A2</button>
-                <button class="btn">A3</button>
-                <button class="btn">A4</button>
+                <button id="A1" class="btn sits">A1</button>
+                <button id="A2" class="btn sits">A2</button>
+                <button id="A3" class="btn sits">A3</button>
+                <button id="A4" class="btn sits">A4</button>
                 <!-- 2nd row -->
-                <button class="btn">B1</button>
-                <button class="btn">B2</button>
-                <button class="btn">B3</button>
-                <button class="btn">B4</button>
+                <button id="B1" class="btn sits">B1</button>
+                <button id="B2" class="btn sits">B2</button>
+                <button id="B3" class="btn sits">B3</button>
+                <button id="B4" class="btn sits">B4</button>
                 <!-- 3rd row -->
-                <button class="btn">C1</button>
-                <button class="btn">C2</button>
-                <button class="btn">C3</button>
-                <button class="btn">C4</button>
+                <button id="C1" class="btn sits">C1</button>
+                <button id="C2" class="btn sits">C2</button>
+                <button id="C3" class="btn sits">C3</button>
+                <button id="C4" class="btn sits">C4</button>
                 <!-- 4th row -->
-                <button class="btn">D1</button>
-                <button class="btn">D2</button>
-                <button class="btn">D3</button>
-                <button class="btn">D4</button>
+                <button id="D1" class="btn sits">D1</button>
+                <button id="D2" class="btn sits">D2</button>
+                <button id="D3" class="btn sits">D3</button>
+                <button id="D4" class="btn sits">D4</button>
                 <!-- 5th row -->
-                <button class="btn">E1</button>
-                <button class="btn">E2</button>
-                <button class="btn">E3</button>
-                <button class="btn">E4</button>
+                <button id="E1" class="btn sits">E1</button>
+                <button id="E2" class="btn sits">E2</button>
+                <button id="E3" class="btn sits">E3</button>
+                <button id="E4" class="btn sits">E4</button>
                 <!-- 6th row -->
-                <button class="btn">F1</button>
-                <button class="btn">F2</button>
-                <button class="btn">F3</button>
-                <button class="btn">F4</button>
+                <button id="F1" class="btn sits">F1</button>
+                <button id="F2" class="btn sits">F2</button>
+                <button id="F3" class="btn sits">F3</button>
+                <button id="F4" class="btn sits">F4</button>
                 <!-- 7th row -->
-                <button class="btn">G1</button>
-                <button class="btn">G2</button>
-                <button class="btn">G3</button>
-                <button class="btn">G4</button>
+                <button id="G1" class="btn sits">G1</button>
+                <button id="G2" class="btn sits">G2</button>
+                <button id="G3" class="btn sits">G3</button>
+                <button id="G4" class="btn sits">G4</button>
                 <!-- 8th row -->
-                <button class="btn">H1</button>
-                <button class="btn">H2</button>
-                <button class="btn">H3</button>
-                <button class="btn">H4</button>
+                <button id="H1" class="btn sits">H1</button>
+                <button id="H2" class="btn sits">H2</button>
+                <button id="H3" class="btn sits">H3</button>
+                <button id="H4" class="btn sits">H4</button>
                 <!-- 9th row -->
-                <button class="btn">I1</button>
-                <button class="btn">I2</button>
-                <button class="btn">I3</button>
-                <button class="btn">I4</button>
+                <button id="I1" class="btn sits">I1</button>
+                <button id="I2" class="btn sits">I2</button>
+                <button id="I3" class="btn sits">I3</button>
+                <button id="I4" class="btn sits">I4</button>
                 <!-- 10th row -->
-                <button class="btn">J1</button>
-                <button class="btn">J2</button>
-                <button class="btn">J3</button>
-                <button class="btn">J4</button>
+                <button id="J1" class="btn sits">J1</button>
+                <button id="J2" class="btn sits">J2</button>
+                <button id="J3" class="btn sits">J3</button>
+                <button id="J4" class="btn sits">J4</button>
                 
             </div>
           </div>
@@ -281,14 +282,16 @@
             <div class="bg-[#F7F8F8] space-y-2">
               <div class="right-part-text flex justify-between p-5">
                 <div>
-                  <span>seat</span><span class="text-[#1DD100]">0</span>
+                  <span>seat</span>
+                  <!-- Boked Sit -->
+                  <span id="booked-sit" class="text-[#1DD100]">0</span>
                 </div>
                 <p>class</p>
                 <p>Price</p>
               </div>
               <hr />
               <!-- sit name display -->
-              <div>
+              <div class="flex justify-between p-4">
                 <div id="Sit-name-Container"></div>
                 <div id="sit-place-container"></div>
                 <div id="site-price-container"></div>
