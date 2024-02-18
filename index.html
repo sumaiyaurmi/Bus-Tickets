@@ -163,7 +163,9 @@
             compare prices, and select their preferred seating options
           </p>
         </div>
-        <div class="bg-[#FFFFFF] mx-32 my-5 rounded-3xl flex gap-5">
+        <div
+          class="bg-[#FFFFFF] mx-32 mt-5 rounded-3xl flex flex-col lg:flex-row gap-5"
+        >
           <!-- bam -->
           <div>
             <div class="flex justify-between">
@@ -183,25 +185,135 @@
               </button>
             </div>
             <div class="bg-[#F7F8F8] m-4 rounded-3xl">
-              <img src="./images/Group 43.svg" alt="">
+              <img src="./images/Group 43.svg" alt="" />
             </div>
           </div>
           <div>
-            <img src="./images/info-devider.png" alt="">
+            <img src="./images/info-devider.png" alt="" />
           </div>
           <!-- dan -->
           <div class="pt-32">
-<img src="./images/fare.png" alt="">
-<h3 class="font-railway font-bold text-2xl">550 Taka
-  <br><span class="text-[#03071299] text-xl">Per Seat</span></h3>
+            <img src="./images/fare.png" alt="" />
+            <h3 class="font-railway font-bold text-2xl">
+              550 Taka <br /><span class="text-[#03071299] text-xl"
+                >Per Seat</span
+              >
+            </h3>
           </div>
         </div>
       </section>
       <!-- poribohon end -->
       <!-- sit section start -->
-      <section></section>
+      <section class="bg-[#F7F8F8]">
+        <div
+          class="bg-[#FFFFFF] mx-32 p-4 grid grid-cols-1 lg:grid-cols-2 gap-10 rounded-3xl"
+        >
+          <!-- left part -->
+          <div class="left-part space-y-4">
+            <div class="left-part-text space-y-4">
+              <h3 class="text-2xl font-semibold">Select Your Seat</h3>
+              <hr />
+              <img src="./images/Group 53.svg" alt="" />
+              <hr />
+              <btn class="flex justify-end"
+                ><img src="./images/Vector.svg" alt="" />
+              </btn>
+            </div>
+
+            <div class="grid grid-cols-2 gap-20 left-part-sits">
+              <div class="space-x-2 grid grid-cols-2 gap-3">
+                <button class="btn">A1</button>
+                <button class="btn">A2</button>
+                <button class="btn">B2</button>
+                <button class="btn">B2</button>
+              </div>
+              <div class="space-x-2 grid grid-cols-2 gap-3">
+                <button class="btn">A3</button>
+                <button class="btn">A4</button>
+                <button class="btn">B3</button>
+                <button class="btn">B4</button>
+              </div>
+            </div>
+          </div>
+          <!-- right part -->
+          <div class="right-part space-y-3">
+            <h3 class="text-2xl font-semibold">Select Your Seat</h3>
+            <hr />
+            <div class="bg-[#F7F8F8] space-y-2">
+              <div class="right-part-text flex justify-between p-5">
+                <div>
+                  <span>seat</span><span class="text-[#1DD100]">0</span>
+                </div>
+                <p>class</p>
+                <p>Price</p>
+              </div>
+              <hr />
+              <!-- sit name display -->
+              <div>
+                <div id="Sit-name-Container"></div>
+                <div id="sit-place-container"></div>
+                <div id="site-price-container"></div>
+              </div>
+              <!-- Total Price -->
+              <div class="flex justify-between">
+                <h3 class="font-inter font-bold">Total Price</h3>
+                <div>
+                  <span>BDT</span>
+                  <!-- display total price -->
+                  <span></span>
+                </div>
+              </div>
+              <!-- cupone input -->
+              <div class="px-4">
+                <input
+                  type="text"
+                  class="bg-white w-[250px] p-4"
+                  placeholder="Have Any Cupon "
+                />
+                <button class="btn bg-[#1DD100] text-white p-4">Apply</button>
+              </div>
+              <!-- grand Total -->
+              <div class="flex justify-between">
+                <h3 class="font-inter font-bold">Grand total</h3>
+                <div>
+                  <span>BDT</span>
+                  <!-- display Grand price -->
+                  <span></span>
+                </div>
+              </div>
+            </div>
+            <!-- personal info -->
+            <div class="bg-[#F7F8F8] space-y-2 p-4">
+              <h3 class="font-inter font-bold">Passenger Name</h3>
+              <input
+                type="text"
+                class="w-3/4 p-4"
+                placeholder="Enter your Name"
+              />
+              <h3 class="font-inter font-bold">Phone Number</h3>
+              <input
+                type="number"
+                class="w-3/4 p-4"
+                placeholder="Enter your number"
+              />
+              <h3 class="font-inter font-bold">Email Id</h3>
+              <input
+                type="email"
+                class="w-3/4 p-4"
+                placeholder="Enter your email Id"
+              />
+              <button class="w-full bg-[#1DD100] text-white p-5 rounded-xl">
+                Next
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- sit section end -->
     </main>
     <footer></footer>
+
+    <script src="./js/utility.js"></script>
+    <script src="./js/bus-tickets.js"></script>
   </body>
 </html>
