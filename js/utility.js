@@ -1,7 +1,7 @@
-function setBackgroundColorById(elementId) {
-  const element = document.getElementById(elementId);
-  element.classList.add("bg-orange-400");
-}
+// function setBackgroundColorById(elementId) {
+//   const element = document.getElementById(elementId);
+//   element.classList.add("");
+// }
 function getNewScoreValueById(elementId) {
   const element = document.getElementById(elementId);
   const elementText = element.innerText;
