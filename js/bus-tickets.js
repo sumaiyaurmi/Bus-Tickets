@@ -1,12 +1,19 @@
+ 
+let count=0;
 const Sits = document.querySelectorAll(".sits");
 for (const sit of Sits) {
   sit.addEventListener("click", colorMe);
 
-  function colorMe() {
 
-let count=[]
-let sitText=sit.innerText
-count.push(sitText)
+  function colorMe() {
+count=count+1; 
+
+if(count ===4){
+for(const sit of Sits){
+  sit.setAttribute('disabled',true)
+}
+
+}
 
     sit.classList.add("bg-[#1DD100]");
 
@@ -45,7 +52,7 @@ count.push(sitText)
     // total price
     const bookingSitCollection = getNewScoreValueById("booked-sit");
     const totalPrice = bookingSitCollection * 550;
-    // document.getElementById('total-price').innerText=totalPrice
+    document.getElementById('total-price').innerText=totalPrice
     // grand total
     const bookingSit = getNewScoreValueById("booked-sit");
     let grandPrice = bookingSit * 550;
