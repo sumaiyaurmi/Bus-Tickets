@@ -85,20 +85,19 @@ applyBtn.addEventListener("click", function () {
       const newTotalPrice = totalPrice * (0.15).toFixed(2);
       grandPrice = parseInt(totalPrice - newTotalPrice);
       document.getElementById("grand-total").innerText = grandPrice;
-// apply btn hide
+      // apply btn hide
       document.getElementById("cupon-container").classList.add("hidden");
-// discount append
-document.getElementById("discount-title").innerText="Discount";
-document.getElementById('discount-amount').innerText=newTotalPrice;
-
+      // discount append
+      document.getElementById("discount-title").innerText = "Discount";
+      document.getElementById("discount-amount").innerText = newTotalPrice;
     } else if (cuponInput === "Couple 20") {
       const newTotalPrice = totalPrice * (0.2).toFixed(2);
       grandPrice = parseInt(totalPrice - newTotalPrice);
       document.getElementById("grand-total").innerText = grandPrice;
       document.getElementById("cupon-container").classList.add("hidden");
-// display append
-      document.getElementById("discount-title").innerText="Discount";
-document.getElementById('discount-amount').innerText=newTotalPrice;
+      // display append
+      document.getElementById("discount-title").innerText = "Discount";
+      document.getElementById("discount-amount").innerText = newTotalPrice;
     } else {
       alert("invalid cupon");
     }
@@ -115,6 +114,7 @@ function final() {
   hideElementById("offer-section");
   hideElementById("poribohon");
   hideElementById("sit-section");
+hideElementById('footer')
 
   showElementById("PopUp");
 }
