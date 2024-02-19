@@ -53,6 +53,7 @@ for(const sit of Sits){
     const bookingSitCollection = getNewScoreValueById("booked-sit");
     const totalPrice = bookingSitCollection * 550;
     document.getElementById('total-price').innerText=totalPrice
+    
     // grand total
     const bookingSit = getNewScoreValueById("booked-sit");
     let grandPrice = bookingSit * 550;
