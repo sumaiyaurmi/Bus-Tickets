@@ -5,8 +5,10 @@ for (const sit of Sits) {
 
   function colorMe()
   {
+
+    
     count = count + 1;
-    if (count === 1) {
+    if (count === 1 &&) {
       document.getElementById("next-btn").removeAttribute("disabled");
     }
 
@@ -88,10 +90,15 @@ applyBtn.addEventListener("click", function () {
       const newTotalPrice = totalPrice * (0.15).toFixed(2);
       grandPrice = parseInt(totalPrice - newTotalPrice);
       document.getElementById("grand-total").innerText = grandPrice;
+
+      document.getElementById('cupon-container').classList.add('hidden')
+
     } else if (cuponInput === "Couple 20") {
       const newTotalPrice = totalPrice * (0.2).toFixed(2);
       grandPrice = parseInt(totalPrice - newTotalPrice);
       document.getElementById("grand-total").innerText = grandPrice;
+      document.getElementById('cupon-container').classList.add('hidden')
+
     } else {
       alert("invalid cupon");
     }
