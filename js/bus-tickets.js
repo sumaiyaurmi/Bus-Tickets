@@ -1,22 +1,108 @@
-const Sits=document.querySelectorAll(".sits")
-for(const sit of Sits){
-sit.addEventListener('click',colorMe)
-function colorMe() {
-      sit.classList.add('bg-[#1DD100]')
-    
-    const currentSit=getNewScoreValueById('current-sit');
-    const leftSit=currentSit -1;
-    setNewScoreValueById('current-sit',leftSit);
+const Sits = document.querySelectorAll(".sits");
+for (const sit of Sits) {
+  sit.addEventListener("click", colorMe);
 
-const currentBookedSit=getNewScoreValueById("booked-sit");
-const newBookedSit=currentBookedSit +1;
-setNewScoreValueById('booked-sit',newBookedSit);
+  function colorMe() {
 
+let count=[]
+let sitText=sit.innerText
+count.push(sitText)
 
+    sit.classList.add("bg-[#1DD100]");
 
+    // available sit komano
+    const currentSit = getNewScoreValueById("current-sit");
+    const leftSit = currentSit - 1;
+    setNewScoreValueById("current-sit", leftSit);
+
+    // booked sit barano
+    const currentBookedSit = getNewScoreValueById("booked-sit");
+    const newBookedSit = currentBookedSit + 1;
+    setNewScoreValueById("booked-sit", newBookedSit);
+ 
+// if(newBookedSit >=4){
+//   sit.setAttribute('disabled', true)
+// }
+
+    // append part
+    // name
+    const title = sit.innerText;
+    const nameContainer = document.getElementById("Sit-name-Container");
+    const p1 = document.createElement("p");
+    p1.innerText = title;
+    nameContainer.appendChild(p1);
+    // class
+    const classContainer = document.getElementById("sit-class-container");
+    const p2 = document.createElement("p");
+    p2.innerText = "Economoy";
+    classContainer.appendChild(p2);
+    // Price
+    const priceContainer = document.getElementById("site-price-container");
+    const p3 = document.createElement("p");
+    p3.innerText = "550";
+    priceContainer.appendChild(p3);
+
+    // total price
+    const bookingSitCollection = getNewScoreValueById("booked-sit");
+    const totalPrice = bookingSitCollection * 550;
+    // document.getElementById('total-price').innerText=totalPrice
+    // grand total
+    const bookingSit = getNewScoreValueById("booked-sit");
+    let grandPrice = bookingSit * 550;
+    document.getElementById("grand-total").innerText = grandPrice;
+
+  
+  }
+}
+// test
+
+// discount section
+const applyBtn=document.getElementById('apply-btn')
+applyBtn.addEventListener('click',function(){
+
+  // total price
+  const bookingSitCollection = getNewScoreValueById("booked-sit");
+  const totalPrice = bookingSitCollection * 550;
+// grand price
+const bookingSit = getNewScoreValueById("booked-sit");
+    let grandPrice = bookingSit * 550;
+
+// get the inpuut value
+const cuponInput=document.getElementById('cupon-input').value
+// hole
+if(totalPrice >=2200){
+ if(cuponInput === 'NEW15'){
+      const newTotalPrice =totalPrice*0.15.toFixed(2)
+      grandPrice=parseInt(totalPrice-newTotalPrice)
+      document.getElementById("grand-total").innerText = grandPrice ;
+    }
+else if(cuponInput === 'Couple 20'){
+  const newTotalPrice =totalPrice*0.2.toFixed(2)
+  grandPrice=parseInt(totalPrice-newTotalPrice)
+  document.getElementById("grand-total").innerText = grandPrice ;
+}
+else{
+alert('invalid cupon')
 }
 }
+// na  hole
+else{
+  alert('please booked at least 4 sits')
+  
+}
+})
 
+// next btn click
+function final(){
+hideElementById('header')
+hideElementById('offer-section')
+hideElementById('poribohon')
+hideElementById('sit-section')
 
+showElementById('PopUp')
+}
 
-
+// const butttons = document.querySelectorAll(".sits");
+// for (const btn of butttons){
+//   btn.
+// }
