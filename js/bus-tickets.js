@@ -3,12 +3,9 @@ const Sits = document.querySelectorAll(".sits");
 for (const sit of Sits) {
   sit.addEventListener("click", colorMe);
 
-  function colorMe()
-  {
-
-
+  function colorMe() {
     count = count + 1;
-    if (count === 1 ) {
+    if (count === 1) {
       document.getElementById("next-btn").removeAttribute("disabled");
     }
 
@@ -32,8 +29,8 @@ for (const sit of Sits) {
     const newBookedSit = currentBookedSit + 1;
     setNewScoreValueById("booked-sit", newBookedSit);
 
-sit.style.backgroundColor='green';
-sit.classList.add('text-white')
+    sit.style.backgroundColor = "green";
+    sit.classList.add("text-white");
 
     // append part
     // name
@@ -64,10 +61,8 @@ sit.classList.add('text-white')
     document.getElementById("grand-total").innerText = grandPrice;
 
     // btn click once
-    sit.disabled= true;
-    sit.style.color='white'
-    
-
+    sit.disabled = true;
+    sit.style.color = "white";
   }
 }
 // test
@@ -90,15 +85,20 @@ applyBtn.addEventListener("click", function () {
       const newTotalPrice = totalPrice * (0.15).toFixed(2);
       grandPrice = parseInt(totalPrice - newTotalPrice);
       document.getElementById("grand-total").innerText = grandPrice;
-
-      document.getElementById('cupon-container').classList.add('hidden')
+// apply btn hide
+      document.getElementById("cupon-container").classList.add("hidden");
+// discount append
+document.getElementById("discount-title").innerText="Discount";
+document.getElementById('discount-amount').innerText=newTotalPrice;
 
     } else if (cuponInput === "Couple 20") {
       const newTotalPrice = totalPrice * (0.2).toFixed(2);
       grandPrice = parseInt(totalPrice - newTotalPrice);
       document.getElementById("grand-total").innerText = grandPrice;
-      document.getElementById('cupon-container').classList.add('hidden')
-
+      document.getElementById("cupon-container").classList.add("hidden");
+// display append
+      document.getElementById("discount-title").innerText="Discount";
+document.getElementById('discount-amount').innerText=newTotalPrice;
     } else {
       alert("invalid cupon");
     }
@@ -118,4 +118,3 @@ function final() {
 
   showElementById("PopUp");
 }
-
