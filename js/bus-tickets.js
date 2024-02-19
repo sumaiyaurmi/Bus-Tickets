@@ -6,9 +6,9 @@ for (const sit of Sits) {
   function colorMe()
   {
 
-    
+
     count = count + 1;
-    if (count === 1 &&) {
+    if (count === 1 ) {
       document.getElementById("next-btn").removeAttribute("disabled");
     }
 
